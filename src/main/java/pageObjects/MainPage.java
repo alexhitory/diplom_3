@@ -55,16 +55,28 @@ public class MainPage {
 
     @Step("Проверка видимости раздела булки")
     public boolean bunsIsVisible() {
-        return webDriver.findElement(elementsLocators.bunsHeader).isDisplayed();
+        String tabText = webDriver.findElement(elementsLocators.activeTabLocator).getText();
+        if (!tabText.equals("Булки")) {
+            throw new AssertionError("Текст активной вкладки не соответствует ожидаемому: 'Булки', фактический текст: '" + tabText + "'.");
+        }
+        return true;
     }
 
     @Step("Проверка видимости раздела соусы")
     public boolean souseIsVisible() {
-        return webDriver.findElement(elementsLocators.saucesHeader).isDisplayed();
+        String tabText = webDriver.findElement(elementsLocators.activeTabLocator).getText();
+        if (!tabText.equals("Соусы")) {
+            throw new AssertionError("Текст активной вкладки не соответствует ожидаемому: 'Соусы', фактический текст: '" + tabText + "'.");
+        }
+        return true;
     }
 
     @Step("Проверка видимости раздела начинки")
     public boolean fillingsIsVisible() {
-        return webDriver.findElement(elementsLocators.fillingsHeader).isDisplayed();
+        String tabText = webDriver.findElement(elementsLocators.activeTabLocator).getText();
+        if (!tabText.equals("Начинки")) {
+            throw new AssertionError("Текст активной вкладки не соответствует ожидаемому: 'Начинки', фактический текст: '" + tabText + "'.");
+        }
+        return true;
     }
 }

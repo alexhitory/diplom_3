@@ -43,16 +43,16 @@ public class ScrollMenuTest {
     }
 
     @Test
-    @DisplayName("Тест перехода к разделу начинки")
-    public void scrollToFillingsSectionTest() throws InterruptedException {
+    @DisplayName("Тест перехода к разделу соусы")
+    public void scrollToSouseSectionTest() throws InterruptedException {
         mainPage.scrollToSouse();
 
         assertTrue(mainPage.souseIsVisible());
     }
 
     @Test
-    @DisplayName("Тест перехода к разделу соусы")
-    public void scrollToSouseSectionTest() throws InterruptedException {
+    @DisplayName("Тест перехода к разделу начинки")
+    public void scrollToFillingsSectionTest() throws InterruptedException {
         mainPage.scrollToFillings();
 
         assertTrue(mainPage.fillingsIsVisible());

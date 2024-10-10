@@ -21,6 +21,7 @@ public class ElementsLocators {
     public By bunsHeader = By.xpath("//h2[contains(text(), 'Булки')]");
     public By saucesHeader = By.xpath("//h2[contains(text(), 'Соусы')]");
     public By fillingsHeader = By.xpath("//h2[contains(text(), 'Начинки')]");
+    public By activeTabLocator = By.xpath("//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']");
 
     //Страница авторизации
 
